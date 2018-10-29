@@ -1,0 +1,24 @@
+{
+  "name": "fluxlii-site",
+  "version": "1.0.0",
+  "description": "The official site for fluxlii.com",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fluxlii/fluxlii-site.git"
+  },
+  "author": "@fluxlii",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fluxlii/fluxlii-site/issues"
+  },
+  "homepage": "https://github.com/fluxlii/fluxlii-site#readme",
+  "devDependencies": {
+    "jest": "^23.6.0",
+    "jest-puppeteer": "^3.4.0",
+    "puppeteer": "^1.9.0"
+  }
+}
