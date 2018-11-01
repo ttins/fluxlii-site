@@ -1,0 +1,14 @@
+plugins:
+# JavaScript
+  eslint:
+    enabled: true
+# CSS
+  stylelint:
+    enabled: true
+# Markdown
+  markdownlint:
+    enabled: true
+# FIXMEs
+  fixme:
+    enabled: true
+  
