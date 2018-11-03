@@ -16,6 +16,7 @@ before_script:
   - chmod +x ./cc-test-reporter
   - ./cc-test-reporter before-build
 before_install:
+  - npm install stylelint-config-airbnb
   - npm install
 script:
   - npm test
