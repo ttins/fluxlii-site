@@ -3,17 +3,18 @@
  * in an html file. More advanced test will be written by Chris.
  */
 
-const cheerio = require('cheerio')
-const { readFileSync } = require('fs')
-const FILE_PATH = `${process.cwd()}/index.html`
+const cheerio = require('cheerio');
+const { readFileSync } = require('fs');
 
- describe('html', () => {
-     const $ = cheerio.load(readFileSync(FILE_PATH))
-     it('should have a head', () => {
-        expect($('html').find('head').length).toBe(1)
-     })
+const FILE_PATH = `${process.cwd()}/index.html`;
 
-     it('should have a body', () => {
-         expect($('html').find('body').length).toBe(1)
-     })
- })
+describe('html', () => {
+  const $ = cheerio.load(readFileSync(FILE_PATH));
+  it('should have a head', () => {
+    expect($('html').find('head').length).toBe(1);
+  });
+
+  it('should have a body', () => {
+    expect($('html').find('body').length).toBe(1);
+  });
+});
