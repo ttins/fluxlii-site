@@ -1,11 +1,40 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Fluxlii</title>
 </head>
+
 <body>
-<p>yoyoyoyoyoyoyo</p>
+    <p>yoyoyoyoyoyoyo</p>
+    <ul id="member-list">
+    </ul>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
+        crossorigin="anonymous"></script>
+    <script src="/js/index.js"></script>
+    <script>
+        $(document).ready(() => {
+            console.log('here')
+            const FluxliiMember = module.FluxliiMember;
+            console.log(module);
+
+            const members = [
+                new FluxliiMember('Ben', 'bio here'),
+                new FluxliiMember('Chris', 'bio here'),
+                new FluxliiMember('Tak', 'bio here'),
+                new FluxliiMember('Thomas', 'bio here'),
+                new FluxliiMember('Tye', 'bio here'),
+            ];
+            members.forEach(member => {
+                const memberList = document.getElementById('member-list');
+                const m = document.createElement('li');
+                m.innerText = `${member.getName()} - ${member.getBio()}`;
+                memberList.appendChild(m);
+            });
+        })
+    </script>
 </body>
+
 </html>
