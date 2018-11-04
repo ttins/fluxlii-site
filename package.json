@@ -4,7 +4,7 @@
   "description": "The official site for fluxlii.com",
   "main": "index.js",
   "scripts": {
-    "test": "jest --coverage"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -34,6 +34,27 @@
       "initialSubgroupPR": "Update dependencies for ${group}",
       "basicPR": "Update ${dependency} to the latest version",
       "groupPR": "Update ${dependency} in group ${group} to the latest version"
+    }
+  },
+  "jest": {
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "**/js/*.{js,jsx}",
+    "!**/node_modules/**",
+    "!**/test/**"
+    ],
+    "coverageReporters": [
+      "json",
+      "lcov",
+      "text"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 0,
+        "functions": 80,
+        "lines": 0,
+        "statements": -10
+      }
     }
   }
 }
