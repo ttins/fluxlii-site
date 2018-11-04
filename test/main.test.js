@@ -5,6 +5,7 @@
 
 const cheerio = require('cheerio');
 const { readFileSync } = require('fs');
+const { FluxliiMember } = require('../js/index');
 
 const FILE_PATH = `${process.cwd()}/index.html`;
 
@@ -17,4 +18,12 @@ describe('html', () => {
   it('should have a body', () => {
     expect($('html').find('body').length).toBe(1);
   });
+});
+
+
+describe('FluxliiMember', () => {
+  const member = new FluxliiMember('tak', 'bio');
+
+  it('should have a name', () => expect(member.getName()).toEqual('tak'));
+  it('should have a bio', () => expect(member.getBio()).toEqual('bio'));
 });
